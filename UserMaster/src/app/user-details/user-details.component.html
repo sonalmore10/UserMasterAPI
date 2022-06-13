@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="jumbotron py-3">
+        <h1 class="display-4 text-center">
+            User Master
+        </h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <app-user-details-form></app-user-details-form>
+    </div>
+    <div class="col-md-6">
+    <table class="table">
+        <thead class="thead-light">
+           <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Mobile No</th>
+            <th></th>
+           </tr>
+           
+        </thead>
+        <tbody>
+            <tr *ngFor="let userdetails of service.list">
+                <td>{{userdetails.UserName}}</td>
+                <td>{{userdetails.Email}}</td>
+                <td>{{userdetails.Address1}}</td>
+                <td>{{userdetails.Mobile}}</td>
+                <td>
+                    <i class="far fa-trash-alt fa-lg text-danger"></i>
+                </td>
+               </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
